@@ -3,7 +3,7 @@
 {% block content %}
 <h1 class="post-title">Contact</h1>
 <div class="form">
-    <form>
+    <form id="contact-form" action="https://formspree.io/xrgyvbor" method="POST">
         <div class="email-form">
             <label for="email-label">
                 <p>E-mail</p>
@@ -20,10 +20,11 @@
             <textarea rows=7 cols=2 id="message-input" class="message-input" name="message"></textarea>
             <div class="status-message">
                 <p class="error-para"></p>
+                <p class="success-para"></p>
             </div>
         </div>
 
-        <button class='read-more-button' type="submit">Send</button>
+        <button id="contact-button" class='read-more-button' type="submit">Send</button>
     </form>
 </div>
 
