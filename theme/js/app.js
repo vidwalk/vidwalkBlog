@@ -47,3 +47,9 @@ $(document).click(function () {
         statusElmEmail.append('')
     }
 })
+
+
+var tl = gsap.timeline({defaults: {duration: 1 }});
+
+tl.from(".post",{x:50, stagger:.6,opacity:0})
+.from(".sidebar-sticky",{y:-50,stagger:.6,opacity:0},'-=2');
