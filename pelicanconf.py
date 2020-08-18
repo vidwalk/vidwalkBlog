@@ -5,7 +5,8 @@ from __future__ import unicode_literals
 AUTHOR = 'Claudiu Rediu'
 SITENAME = 'Vidwalk'
 SITEURL = 'https://vidwalk.github.io/vidwalkBlog'
-
+#for demo comment top. for release comment bottom
+#SITEURL = ''
 PATH = 'content'
 
 TIMEZONE = 'Europe/Berlin'
@@ -41,3 +42,5 @@ PROFILE_IMAGE = 'LionwallpaperOwn.png'
 
 #using our own defined color theme
 COLOR_THEME = '0g'
+
+DELETE_OUTPUT_DIRECTORY = True

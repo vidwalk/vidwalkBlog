@@ -4,7 +4,7 @@ Slug: github-secret-repo
 Summary: I will share a secret I randomly found while using Github.
 tldr: If you use your username when you create a repository, you will be able to use the readme.md to create a longer description on your Github Profile.
 
-I was looking into hosting this page on Github Pages as a demo run and while I was typing in I got a surprise.
+I was looking into hosting this page on Github Pages as a demo run for it. While inputting the name, there I found a surprise.
 
 ![Github Secret Repo](https://vidwalk.github.io/vidwalkBlog/images/githubsecret.png "Github Secret Repo")
 
