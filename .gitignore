@@ -1,0 +1,5 @@
+'*.pyc'  #don't need pyc files
+
+make.exe
+libintl3.dll
+libiconv2.dll

@@ -1,0 +1,52 @@
+
+/*Contact Form*/
+label, input{
+    display: block;
+  }
+  label{
+    margin-bottom: 10px;
+  }
+  input:focus{
+    outline: solid #9480805e 3px;
+    transition: .2s ease outline; 
+  }
+  input.active{
+    outline: solid rgba(255, 0, 0, 0.8) 2px;
+    transition: .2s ease outline; 
+  }
+  textarea:focus{
+    outline: solid #9480805e 3px;
+    transition: .2s ease outline; 
+  }
+  textarea.active{
+    outline: solid rgba(255, 0, 0, 0.8) 2px;
+    transition: .2s ease outline; 
+  }
+  .error-para{
+    color: red;
+    width: 280px;
+    height: 10px;
+  }
+  
+  .form .message-input {
+    width: 80%;
+    font-size: 1rem;
+    text-align: left;
+    resize: none;
+  }
+  .form .email-input{
+    width: 80%;
+    font-size: 1rem;
+    text-align: left;
+  }
+  
+  .form .read-more-button{
+    width: 80%;
+    background-color: transparent;
+    color: #2d334a;
+    padding: .5rem .8rem;
+    border: 1px solid #eee;
+    font-size: .8rem;
+    margin-top: 1rem;
+    font-weight: bold;
+  }

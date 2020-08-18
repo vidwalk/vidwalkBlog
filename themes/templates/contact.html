@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="post-title">Contact</h1>
+<div class="form">
+    <form>
+        <div class="email-form">
+            <label for="email-label">
+                <p>E-mail</p>
+            </label>
+            <input type="email" id="email-input" class="email-input" name="email" id="">
+            <div class="status-email">
+                <p class="error-para"></p>
+            </div>
+        </div>
+        <div class="message-form">
+            <label for="message-label">
+                <p>Message</p>
+            </label>
+            <textarea rows=7 cols=2 id="message-input" class="message-input" name="message"></textarea>
+            <div class="status-message">
+                <p class="error-para"></p>
+            </div>
+        </div>
+
+        <button class='read-more-button' type="submit">Send</button>
+    </form>
+</div>
+
+{% endblock %}
+
