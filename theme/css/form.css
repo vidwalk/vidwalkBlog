@@ -27,7 +27,11 @@ label, input{
     width: 280px;
     height: 10px;
   }
-  
+  .success-para{
+    color: green;
+    width: 280px;
+    height: 10px;
+  }
   .form .message-input {
     width: 80%;
     font-size: 1rem;
