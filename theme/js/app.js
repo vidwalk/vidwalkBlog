@@ -1,3 +1,4 @@
+//Stop the form from sending the contents if they don't follow certain standards
 $(document).ready(function () {
     $('.read-more-button').click(function (event) {
         
@@ -31,7 +32,7 @@ $(document).ready(function () {
         }
     })
 })
-
+//Code to reset the error message when we click on the message or email input
 $(document).click(function () {
     var statusElmMessage = $('.status-message .error-para');
     var statusElmEmail = $('.status-email .error-para');
@@ -48,13 +49,14 @@ $(document).click(function () {
     }
 })
 
-
+// GSAP Code for animating posts and contents in sidebar
 var tl = gsap.timeline({defaults: {duration: 1 }});
 
 tl.from(".post",{x:50, stagger:.6,opacity:0})
 .from(".sidebar-sticky",{y:-50,stagger:.6,opacity:0},'-=2');
 
-
+//Make sure that the form doesn't redirect and confirms when the email got through
+//It uses FormSpree
 window.addEventListener("DOMContentLoaded", function() {
 
     // get the form elements defined in your form HTML above
