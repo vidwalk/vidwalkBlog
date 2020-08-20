@@ -9,7 +9,7 @@
 		<!-- Metadata -->
 	<meta name="description" content="">
 	<meta property="og:description" content="">
-	<meta property="og:title" content="Using GSAP In Your Projects" />
+	<meta property="og:title" content="Using GSAP In Your Projects(Part 1)" />
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://vidwalk.github.io/vidwalkBlog/gsap-pages.html" />
 		<meta property="og:image" content="https://vidwalk.github.io/vidwalkBlog/images/LionwallpaperOwn.png" />
@@ -78,10 +78,10 @@
 	</div>
 </div>		<div class="content container">
 <div class="post">
-	<h1 class="post-title">Using GSAP In Your Projects</h1>
+	<h1 class="post-title">Using GSAP In Your Projects(Part 1)</h1>
 	<span class="post-date">Wed 19 August 2020</span>
 	<p>GSAP is an animation javascript library. It is flexible and powerful. I haven't explored its full capabilities yet. As you could see when you opened this article, it has an animation that brings the text to its position. That was done with GSAP.</p>
-<p>I will cover more examples, but for now I'm going to show you what I did to achieve this effect. GSAP there are two main ways to do your animations: create them separately or use the timeline. Creating them separately makes them all go at the same time. The timeline is great for control.</p>
+<p>I will cover more examples, but for now I'm going to show you what I did to achieve this effect. In GSAP there are two main ways to do your animations: create them separately or use the timeline. Creating them separately makes them all go at the same time. The timeline is great for control.</p>
 <p>For this webpage, I did something very simple. I created the timeline, I selected the class of the items I wanted to animate and then included the parameters for the animation. The code for that is here:</p>
 <div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">tl</span> <span class="o">=</span> <span class="nx">gsap</span><span class="p">.</span><span class="nx">timeline</span><span class="p">({</span><span class="nx">defaults</span><span class="o">:</span> <span class="p">{</span><span class="nx">duration</span><span class="o">:</span> <span class="mi">1</span> <span class="p">}});</span>
 
