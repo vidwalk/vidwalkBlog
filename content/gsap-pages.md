@@ -6,14 +6,14 @@ tldr: There are snippets of code in this article than when applied on the classe
 
 GSAP is an animation javascript library. It is flexible and powerful. I haven't explored its full capabilities yet. As you could see when you opened this article, it has an animation that brings the text to its position. That was done with GSAP.
 
-I will cover more examples, but for now I'm going to show you what I did to achieve this effect. GSAP there are two main ways to do your animations: create them separately or use the timeline. Creating them separately makes them all go at the same time. The timeline is great for control.
+I will cover more examples, but for now I'm going to show you what I did to achieve this effect. In GSAP there are two main ways to do your animations: create them separately or use the timeline. Creating them separately makes them all go at the same time. The timeline is great for control.
 
 For this webpage, I did something very simple. I created the timeline, I selected the class of the items I wanted to animate and then included the parameters for the animation. The code for that is here:
 
 ```javascript
 var tl = gsap.timeline({defaults: {duration: 1 }});
 
-tl.from(".post",{x:50, stagger:.6,opacity:0})
+tl.from(".post",{x:"-=50", stagger:.6,opacity:0})
   .from(".sidebar-sticky",{y:-50,stagger:.6,opacity:0},'-=2');
 ```
 

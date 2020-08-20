@@ -52,7 +52,7 @@ $(document).click(function () {
 // GSAP Code for animating posts and contents in sidebar
 var tl = gsap.timeline({defaults: {duration: 1 }});
 
-tl.from(".post",{x:50, stagger:.6,opacity:0})
+tl.from(".post",{x:"-=50", stagger:.6,opacity:0})
 .from(".sidebar-sticky",{y:-50,stagger:.6,opacity:0},'-=2');
 
 //Make sure that the form doesn't redirect and confirms when the email got through
