@@ -374,8 +374,7 @@ tbody tr:nth-child(odd) th {
 .post-title,
 .post-title a {
   color: #303030;
-  display: inline-block;
-  white-space: nowrap;
+  
 }
 
 .page-title,

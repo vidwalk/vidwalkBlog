@@ -106,8 +106,3 @@ window.addEventListener("DOMContentLoaded", function() {
     xhr.send(data);
   }
 
-fitty('.post-title',{
-  minSize:12,
-  maxSize:200
-});
-fitty('.page-title');
