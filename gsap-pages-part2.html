@@ -29,6 +29,8 @@
 		<link rel="stylesheet" href="https://vidwalk.github.io/vidwalkBlog/theme/css/syntax.css" />
 		<!--Shoelace-->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.13/dist/shoelace/shoelace.css">
+		<!--Zoom images css-->
+		<link rel="stylesheet" href="https://vidwalk.github.io/vidwalkBlog/theme/css/zoom.css">
 			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" crossorigin="anonymous">
 
 		<!-- Analytics -->
@@ -216,9 +218,10 @@
 
 
 <p>We form an array of all the items with class gun and for each object we set an animation that moves the item from right to left. The trigger will be the actual element. The thing that is special about this is that it uses the width of the viewport to set the animation. The animation will start when you reach the point of the panel specific for that animation. I didn't find any solutions for setting animations when horizontal scrolling is used with GSAP. This is how I ended up with my own solution.</p>
+	<div class="tldr">
 	<sl-details summary="TL;DR">
 		The code snippets can be used to create a page with horizontal scrolling and animations for great story-telling. The first gif is an example of that.
-	</sl-details>
+	</sl-details></div>
 	  
 </div>
 		</div>
@@ -234,7 +237,10 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
 	<!-- Gouncounter JS-->
 	<script data-goatcounter="https://2401.goatcounter.com/count"
-                        async src="//gc.zgo.at/count.js"></script>
+						async src="//gc.zgo.at/count.js"></script>
+	<!-- Zoom js-->
+	<!-- Jquery js file-->
+	<script src="https://vidwalk.github.io/vidwalkBlog/theme/js/zoom.js"></script>
 	<!-- js file-->
 	<script src="https://vidwalk.github.io/vidwalkBlog/theme/js/app.js"></script>
 	 </html>
