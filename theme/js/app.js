@@ -59,8 +59,8 @@ tl.from(".post", {
     stagger: .6,
     opacity: 0
   })
-  .to(".sidebar-sticky", {
-    y: -50,
+  .fro, (".sidebar-sticky", {
+    y: 50,
     stagger: .6,
     opacity: 0
   }, '-=2');
