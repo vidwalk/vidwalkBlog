@@ -7,4 +7,4 @@ tldr: First blog Post
 My first blog post. This is my avatar:
 
 
-<img alt="Avatar" src="https://vidwalk.github.io/vidwalkBlog/images/Lionwallpaper.png" data-action="zoom" >
+<img alt="Avatar" zoom src="https://vidwalk.github.io/vidwalkBlog/images/Lionwallpaper.png">
