@@ -14,9 +14,10 @@
 	<span class="post-date">{{ article.locale_date }}</span>
 	{{ article.content }}
 	{% include 'fragments/disqus.html' %}
+	<div class="tldr">
 	<sl-details summary="TL;DR">
 		{{ article.tldr }}
-	</sl-details>
+	</sl-details></div>
 	  
 </div>
 {% endblock %}

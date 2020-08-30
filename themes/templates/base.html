@@ -31,6 +31,8 @@
 		<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/syntax.css" />
 		<!--Shoelace-->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.13/dist/shoelace/shoelace.css">
+		<!--Zoom images css-->
+		<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/zoom.css">
 		{% if FONT_AWESOME_JS %}
 			<script src="{{ FONT_AWESOME_JS }}" crossorigin="anonymous"></script>
 		{% elif FONT_AWESOME_CSS %}
@@ -64,7 +66,10 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
 	<!-- Gouncounter JS-->
 	<script data-goatcounter="https://2401.goatcounter.com/count"
-                        async src="//gc.zgo.at/count.js"></script>
+						async src="//gc.zgo.at/count.js"></script>
+	<!-- Zoom js-->
+	<!-- Jquery js file-->
+	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/zoom.js"></script>
 	<!-- js file-->
 	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/app.js"></script>
 	 </html>

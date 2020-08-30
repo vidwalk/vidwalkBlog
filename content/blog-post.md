@@ -6,4 +6,5 @@ tldr: First blog Post
 
 My first blog post. This is my avatar:
 
-![Avatar](https://vidwalk.github.io/vidwalkBlog/images/Lionwallpaper.png "Avatar")
+
+<img alt="Avatar" src="https://vidwalk.github.io/vidwalkBlog/images/Lionwallpaper.png" data-action="zoom" >

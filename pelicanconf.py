@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Claudiu Rediu'
-SITENAME = 'Vidwalk'
+SITENAME = '.WebWalk'
 FOOTER_TEXT = '© CLAUDIU REDIU 2020'
 SITEURL = 'https://vidwalk.github.io/vidwalkBlog'
 #for demo comment top. for release comment bottom
