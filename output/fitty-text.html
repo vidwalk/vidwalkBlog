@@ -81,19 +81,19 @@
 	<h1 class="post-title">Fitted with Fitty</h1>
 	<span class="post-date">Wed 26 August 2020</span>
 	<p>Fitty is a small-sized javascript script that scales text so it fits to its parent container. There are no dependencies and it is straightforward to use. A very quick example given by the creator is:</p>
-<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;my-element&quot;</span><span class="p">&gt;</span>Hello World<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;my-element&quot;</span><span class="p">&gt;</span>Hello World<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;fitty.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="nx">fitty</span><span class="p">(</span><span class="s1">&#39;#my-element&#39;</span><span class="p">);</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>And it works, just like that. I created a bigger example for this:</p>
 <p><img alt="Fitty at work" src="https://media.giphy.com/media/LpdKVavZ3808Yy64je/giphy.gif"> </p>
 <p>The html for this is:</p>
-<div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -134,11 +134,11 @@
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>With the following css:</p>
-<div class="highlight"><pre><span></span><span class="nt">html</span><span class="o">,</span>
+<div class="highlight"><pre><span></span><code><span class="nt">html</span><span class="o">,</span>
 <span class="nt">body</span> <span class="p">{</span>
   <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
   <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
@@ -163,24 +163,24 @@
   <span class="k">display</span><span class="p">:</span> <span class="kc">inline-block</span><span class="p">;</span>
   <span class="k">white-space</span><span class="p">:</span> <span class="kc">nowrap</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>Nothing too special. Now for the javascript, it can't get simpler than this:</p>
-<div class="highlight"><pre><span></span><span class="nx">fitty</span><span class="p">(</span><span class="s1">&#39;.text-fit&#39;</span><span class="p">)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="nx">fitty</span><span class="p">(</span><span class="s1">&#39;.text-fit&#39;</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p>To this you can add multiple options depending on your use case. For example, if you don't want your text to ever be smaller or bigger than a certain size, you can set limits to it(which are translated in pixels):</p>
-<div class="highlight"><pre><span></span><span class="nx">fitty</span><span class="p">(</span><span class="s1">&#39;#my-element&#39;</span><span class="p">,</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="nx">fitty</span><span class="p">(</span><span class="s1">&#39;#my-element&#39;</span><span class="p">,</span> <span class="p">{</span>
   <span class="nx">minSize</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
   <span class="nx">maxSize</span><span class="o">:</span> <span class="mi">48</span>
 <span class="p">});</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>If you want to keep track of what the code is doing to the text, you can use:</p>
-<div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">fitted</span> <span class="o">=</span> <span class="nx">fitty</span><span class="p">(</span><span class="s1">&#39;.text-fit&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">fitted</span> <span class="o">=</span> <span class="nx">fitty</span><span class="p">(</span><span class="s1">&#39;.text-fit&#39;</span><span class="p">);</span>
 
 <span class="c1">//get one of the elements</span>
 <span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nx">fitted</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">element</span><span class="p">;</span>
@@ -192,7 +192,7 @@
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">);</span>
 
 <span class="p">});</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>Even though it is a small library, it has quite a few options to make sure that it works for you. The link for the repository is <a href="https://github.com/rikschennink/fitty">Fitty Main Repo</a>. I recommend taking a look if your use case is more complex that what I've shown here.</p>
