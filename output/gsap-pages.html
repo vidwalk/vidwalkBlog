@@ -17,7 +17,7 @@
 		<!-- Enable responsiveness on mobile devices-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-		<title>Vidwalk</title>
+		<title>.WebWalk</title>
 
 		<!-- CSS -->
 		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
@@ -29,6 +29,8 @@
 		<link rel="stylesheet" href="https://vidwalk.github.io/vidwalkBlog/theme/css/syntax.css" />
 		<!--Shoelace-->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.13/dist/shoelace/shoelace.css">
+		<!--Zoom images css-->
+		<link rel="stylesheet" href="https://vidwalk.github.io/vidwalkBlog/theme/css/zoom.css">
 			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" crossorigin="anonymous">
 
 		<!-- Analytics -->
@@ -42,7 +44,7 @@
 			<h1>
 				<a href="https://vidwalk.github.io/vidwalkBlog">
 					<img class="profile-picture" src="https://vidwalk.github.io/vidwalkBlog/images/LionwallpaperOwn.png">
-					Vidwalk
+					.WebWalk
 				</a>
 			</h1>
 			<h5>
@@ -92,9 +94,10 @@
 
 <p>When creating the timeline, I set the default duration of the animation to 1. The next step was to select the class for my posts and make them move vertically from x:50, meaning from right to left. Adding a stagger to a multiple posts offsets the starting time of each target's animation. If I have multiple posts, it will wait for the others. I then add the class for the items in the sidebar with a pretty similar animation, but it goes from y:-50, meaning from top to bottom. '-=2' tells the animation to start 2 seconds earlier than when the last one finishes. I wanted to have no animation when I opened the post. This was enough to make it happen fast enough, such that it is not visible. Maybe there are better ways to do it.</p>
 <p>This is the breakdown of the animations on this website at the current moment. I will do more in the future.</p>
+	<div class="tldr">
 	<sl-details summary="TL;DR">
 		There are snippets of code in this article than when applied on the classes in your HTML will make the pages perform the animations for you. There are 2 ways of using gsap. Writing each animation separately or linking them by a timeline. Linking them by a timeline gives control over the sequence and timings in the animations.
-	</sl-details>
+	</sl-details></div>
 	  
 </div>
 		</div>
@@ -110,7 +113,10 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
 	<!-- Gouncounter JS-->
 	<script data-goatcounter="https://2401.goatcounter.com/count"
-                        async src="//gc.zgo.at/count.js"></script>
+						async src="//gc.zgo.at/count.js"></script>
+	<!-- Zoom js-->
+	<!-- Jquery js file-->
+	<script src="https://vidwalk.github.io/vidwalkBlog/theme/js/zoom.js"></script>
 	<!-- js file-->
 	<script src="https://vidwalk.github.io/vidwalkBlog/theme/js/app.js"></script>
 	 </html>

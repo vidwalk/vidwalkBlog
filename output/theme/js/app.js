@@ -47,27 +47,29 @@ $(document).click(function () {
   }
 })
 
-// GSAP Code for animating posts and contents in sidebar
-var tl = gsap.timeline({
-  defaults: {
-    duration: 1
-  }
-});
-
-tl.from(".post", {
-    x: "-=50",
-    stagger: .6,
-    opacity: 0
-  })
-  .to(".sidebar-sticky", {
-    y: -50,
-    stagger: .6,
-    opacity: 0
-  }, '-=2');
 
 //Make sure that the form doesn't redirect and confirms when the email got through
 //It uses FormSpree
 window.addEventListener("DOMContentLoaded", function () {
+  //Both the gsap code and the form code is here to make sure they run after everything has loaded
+  // GSAP Code for animating posts and contents in sidebar
+  var tl = gsap.timeline({
+    defaults: {
+      duration: 1
+    }
+  });
+
+  tl.from(".post", {
+      x: "-=50",
+      stagger: .6,
+      opacity: 0
+    })
+    .from(".sidebar-sticky", {
+      y: 50,
+      stagger: .6,
+      opacity: 0
+    }, '-=2');
+
 
   // get the form elements defined in your form HTML above
 
@@ -91,12 +93,13 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 
   // handle the form submission event
-
-  form.addEventListener("submit", function (ev) {
-    ev.preventDefault();
-    var data = new FormData(form);
-    ajax(form.method, form.action, data, success, error);
-  });
+  if (form) {
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var data = new FormData(form);
+      ajax(form.method, form.action, data, success, error);
+    })
+  };
 });
 
 // helper function for sending an AJAX request
