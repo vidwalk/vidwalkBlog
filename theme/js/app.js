@@ -51,7 +51,8 @@ $(document).click(function () {
 //Make sure that the form doesn't redirect and confirms when the email got through
 //It uses FormSpree
 window.addEventListener("DOMContentLoaded", function () {
-  //Both the gsap code and the form code is here to make sure they run after everything has loaded
+
+  //Every method here will have a comment. Here will run all bits of code that relate to things after they are loaded.
   // GSAP Code for animating posts and contents in sidebar
   var tl = gsap.timeline({
     defaults: {
@@ -70,7 +71,9 @@ window.addEventListener("DOMContentLoaded", function () {
       opacity: 0
     }, '-=2');
 
-
+  //Zoom on Images
+  mediumZoom('[zoom]')
+  //form
   // get the form elements defined in your form HTML above
 
   var form = document.getElementById("contact-form");

@@ -10,9 +10,9 @@
 	<!-- Metadata -->
 	<meta name="description" content="">
 	<meta property="og:description" content="">
-	<meta property="og:title" content="Github Secret Repository" />
+	<meta property="og:title" content="Zoom on Images Medium-Style" />
 	<meta property="og:type" content="article" />
-	<meta property="og:url" content="/github-secret-repo.html" />
+	<meta property="og:url" content="/zoom-images-js.html" />
 	<meta property="og:image" content="/images/LionwallpaperOwn.png" />
 
 	<!-- Enable responsiveness on mobile devices-->
@@ -81,17 +81,34 @@
 	</div>
 </div>	<div class="content container">
 <div class="post">
-	<h1 class="post-title">Github Secret Repository</h1>
-	<span class="post-date">Tue 18 August 2020</span>
-	<p>I was looking into hosting this page on Github Pages as a demo run for it. While inputting the name, there I found a surprise.</p>
-<p><img  alt="Github Secret Repo" zoom src="https://vidwalk.github.io/vidwalkBlog/images/githubsecret.png"></p>
-<p>I created this repository with a readme.md file as instructed, put some text in and voila:</p>
-<p><img  alt="Github Secret Repo" zoom src="https://vidwalk.github.io/vidwalkBlog/images/readme-profile.png"></p>
-<p>From here on, it is easy to plug in links towards website, projects or products you work on.</p>
-<p>There isn't much to share other than this. It is a nice feature to find out by surprise.</p>
+	<h1 class="post-title">Zoom on Images Medium-Style</h1>
+	<span class="post-date">Sun 30 August 2020</span>
+	<p>Sometimes you would like to see some details without having to download the file and do the manual work. Here comes <a href="https://medium-zoom.francoischalifour.com/">Medium Zoom</a> to the rescue.</p>
+<p>The first time I tried to find a good solution to this, I found some libraries that were clunky and had quite the work to be done. With this library, you can simply add whatever attribute you would like to your images and then call a function containing that attribute.</p>
+<p>A very simple example is that you have a picture that you would like your users to zoom in. In my case it is a design I've been working on with Figma. Put the image in your html code and then add an attribute. I used zoom as my attribute.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Zoomed in Image of Figure&quot;</span> <span class="na">zoom</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;/images/Frame1.png&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+
+
+<p>At the bottom of your body, put the following:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+
+
+<p>Now you don't have to worry about storage or speed. The cdn services are fast. This means it will also work well with your page's SEO.</p>
+<p>For the javascript to enable the functionality, write the following code:</p>
+<div class="highlight"><pre><span></span><code>  <span class="c1">//Zoom on Images</span>
+  <span class="nx">mediumZoom</span><span class="p">(</span><span class="s1">&#39;[zoom]&#39;</span><span class="p">);</span>
+</code></pre></div>
+
+
+<p>Now lets show you an example on this page:</p>
+<p><img  alt="Zoomed in Image of Figure" zoom src="/images/Frame1.png"></p>
+<p>I used the same html code in this page with a different path to make it work. This is a nice feature for any article and it works without any frame drops. Other than this, it doesn't require any special css or tricks in the background. </p>
+<p>To learn more, go to <a href="https://github.com/francoischalifour/medium-zoom#usage">Medium Zoom Usage</a>.</p>
 	<div class="tldr">
 	<sl-details summary="TL;DR">
-		If you use your username when you create a repository, you will be able to use the readme.md to create a longer description on your Github Profile.
+		Using the library you can zoom on desktop in the same way you do on Medium. A link at the end of the article will get you to a page where you can learn to use this library.
 	</sl-details></div>
 	  
 </div>
