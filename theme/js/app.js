@@ -51,7 +51,7 @@ $(document).click(function () {
 //Make sure that the form doesn't redirect and confirms when the email got through
 //It uses FormSpree
 window.addEventListener("DOMContentLoaded", function () {
-
+  //Both the gsap code and the form code is here to make sure they run after everything has loaded
   // GSAP Code for animating posts and contents in sidebar
   var tl = gsap.timeline({
     defaults: {
