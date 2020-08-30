@@ -55,15 +55,14 @@ var tl = gsap.timeline({
 });
 
 tl.from(".post", {
-    x: "-=50",
-    stagger: .6,
-    opacity: 0
-  })
-  .from, (".sidebar-sticky", {
-    y: 50,
-    stagger: .6,
-    opacity: 0
-  }, '-=2');
+  x: "-=50",
+  stagger: .6,
+  opacity: 0
+}).from, (".sidebar-sticky", {
+  y: 50,
+  stagger: .6,
+  opacity: 0
+}, '-=2');
 
 //Make sure that the form doesn't redirect and confirms when the email got through
 //It uses FormSpree
