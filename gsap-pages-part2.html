@@ -17,7 +17,7 @@
 		<!-- Enable responsiveness on mobile devices-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-		<title>.WebWalk</title>
+		<title>Vidwalk</title>
 
 		<!-- CSS -->
 		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
@@ -29,8 +29,6 @@
 		<link rel="stylesheet" href="https://vidwalk.github.io/vidwalkBlog/theme/css/syntax.css" />
 		<!--Shoelace-->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.13/dist/shoelace/shoelace.css">
-		<!--Zoom images css-->
-		<link rel="stylesheet" href="https://vidwalk.github.io/vidwalkBlog/theme/css/zoom.css">
 			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" crossorigin="anonymous">
 
 		<!-- Analytics -->
@@ -44,7 +42,7 @@
 			<h1>
 				<a href="https://vidwalk.github.io/vidwalkBlog">
 					<img class="profile-picture" src="https://vidwalk.github.io/vidwalkBlog/images/LionwallpaperOwn.png">
-					.WebWalk
+					Vidwalk
 				</a>
 			</h1>
 			<h5>
@@ -85,7 +83,7 @@
 	<p>Everyone loves a good story. A good way to tell one is with a horizontal scrolling website. It can be quite complicated to build one, but with ScrollTrigger life's easier. I will show you how I ended up with this:</p>
 <p><img alt="Horizontal Scrolling" src="https://media.giphy.com/media/iD6ku6jRon4lPridzG/giphy.gif"></p>
 <p>Inside the index.html I have:</p>
-<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;pin-spacer&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;pin-spacer&quot;</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;description panel&quot;</span><span class="p">&gt;</span>
                 <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -109,11 +107,11 @@
             <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
         <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>We don't need anything fancy for this in terms of html. The secret is in the JS. For the barebones css, you need:</p>
-<div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
   <span class="k">width</span><span class="p">:</span> <span class="mi">600</span><span class="kt">%</span><span class="p">;</span>
   <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
   <span class="k">display</span><span class="p">:</span> <span class="bp">-webkit-</span><span class="n">box</span><span class="p">;</span>
@@ -169,22 +167,22 @@
   <span class="k">overflow-x</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
   <span class="k">overflow-y</span><span class="p">:</span> <span class="kc">scroll</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>Other than that, you can add color to the panels by using background-color. Don't forget to link the scripts at the bottom of the body from <a href="https://greensock.com/docs/v3/Installation?checked=core,scrollTrigger#CDN">GreenSock ScrollTrigger</a>. Now we have our barebones structure for the page. </p>
 <p>The first step is to register the plugin we are going to use. We can do that with:</p>
-<div class="highlight"><pre><span></span><span class="nx">gsap</span><span class="p">.</span><span class="nx">registerPlugin</span><span class="p">(</span><span class="nx">ScrollTrigger</span><span class="p">);</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="nx">gsap</span><span class="p">.</span><span class="nx">registerPlugin</span><span class="p">(</span><span class="nx">ScrollTrigger</span><span class="p">);</span>
+</code></pre></div>
 
 
 <p>To animate our panels, we have to get them. GSAP lets you create arrays out of the objects you want to work with. To get our panels in an array we use:</p>
-<div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">sections</span> <span class="o">=</span> <span class="nx">gsap</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">toArray</span><span class="p">(</span><span class="s2">&quot;.panel&quot;</span><span class="p">);</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">sections</span> <span class="o">=</span> <span class="nx">gsap</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">toArray</span><span class="p">(</span><span class="s2">&quot;.panel&quot;</span><span class="p">);</span>
+</code></pre></div>
 
 
 <p>Now comes the most difficult bit to understand. We are going to create an animation from a panel to another. It streches horizontally from the start of the first panel to the start of the last one without any easing. The container, that has the panels, is the trigger for the animation. The contents are static(won't move) and the animation depends on how much we've scrolled. The only thing that is animated is our view. The snap is then based on the number of sections we have in our panel. To make the animation smooth, we move it depending on the width of the container.</p>
-<div class="highlight"><pre><span></span><span class="nx">gsap</span><span class="p">.</span><span class="nx">registerPlugin</span><span class="p">(</span><span class="nx">ScrollTrigger</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">gsap</span><span class="p">.</span><span class="nx">registerPlugin</span><span class="p">(</span><span class="nx">ScrollTrigger</span><span class="p">);</span>
 
 <span class="kd">let</span> <span class="nx">sections</span> <span class="o">=</span> <span class="nx">gsap</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">toArray</span><span class="p">(</span><span class="s2">&quot;.panel&quot;</span><span class="p">);</span>
 
@@ -199,11 +197,11 @@
         <span class="nx">end</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="s2">&quot;+=&quot;</span> <span class="o">+</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.container&quot;</span><span class="p">).</span><span class="nx">offsetWidth</span>
     <span class="p">}</span>
 <span class="p">});</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>I have added some text in there with the class gun. In a website with horizontal scrolling, there will be some animated texts or objects. We have the text animated with the following code:</p>
-<div class="highlight"><pre><span></span><span class="nx">gsap</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">toArray</span><span class="p">(</span><span class="s1">&#39;.gun&#39;</span><span class="p">).</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">el</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="nx">gsap</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">toArray</span><span class="p">(</span><span class="s1">&#39;.gun&#39;</span><span class="p">).</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">el</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
     <span class="nx">gsap</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="p">{</span>
         <span class="nx">x</span><span class="o">:</span> <span class="s2">&quot;100&quot;</span><span class="p">,</span>
         <span class="nx">duration</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
@@ -214,14 +212,13 @@
         <span class="p">}</span>
     <span class="p">});</span>
 <span class="p">});</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>We form an array of all the items with class gun and for each object we set an animation that moves the item from right to left. The trigger will be the actual element. The thing that is special about this is that it uses the width of the viewport to set the animation. The animation will start when you reach the point of the panel specific for that animation. I didn't find any solutions for setting animations when horizontal scrolling is used with GSAP. This is how I ended up with my own solution.</p>
-	<div class="tldr">
 	<sl-details summary="TL;DR">
 		The code snippets can be used to create a page with horizontal scrolling and animations for great story-telling. The first gif is an example of that.
-	</sl-details></div>
+	</sl-details>
 	  
 </div>
 		</div>
@@ -237,10 +234,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
 	<!-- Gouncounter JS-->
 	<script data-goatcounter="https://2401.goatcounter.com/count"
-						async src="//gc.zgo.at/count.js"></script>
-	<!-- Zoom js-->
-	<!-- Jquery js file-->
-	<script src="https://vidwalk.github.io/vidwalkBlog/theme/js/zoom.js"></script>
+                        async src="//gc.zgo.at/count.js"></script>
 	<!-- js file-->
 	<script src="https://vidwalk.github.io/vidwalkBlog/theme/js/app.js"></script>
 	 </html>

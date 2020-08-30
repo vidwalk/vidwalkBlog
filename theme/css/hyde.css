@@ -64,7 +64,6 @@ html {
 
 @media (min-width: 48em) {
   .sidebar {
-    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
@@ -77,12 +76,14 @@ html {
 .sidebar a {
   color: #fff;
 }
+
 .sidebar a.disabled-link {
   color: rgb(92, 92, 92);
   cursor: not-allowed;
   opacity: 0.5;
   text-decoration: none;
 }
+
 /* About section */
 
 .sidebar-about h1 {
@@ -319,7 +320,8 @@ a.sidebar-social-item.active:focus {
   background-color: #272343;
 }
 
-.theme-base-0g .read-more, .theme-base-0g .read-more-button {
+.theme-base-0g .read-more,
+.theme-base-0g .read-more-button {
   border-color: #ffd803;
 }
 
@@ -327,6 +329,7 @@ a.sidebar-social-item.active:focus {
 .theme-base-0g .related-posts li a:hover {
   color: #280090;
 }
+
 .theme-base-0g .page-title,
 .theme-base-0g .post-title,
 .theme-base-0g .post-title a,
@@ -354,7 +357,8 @@ a.sidebar-social-item.active:focus {
 .theme-base-0g .posts h6 {
   color: #272343;
 }
+
 /* Shoelace */
-.theme-base-0g sl-details::part(base){
+.theme-base-0g sl-details::part(base) {
   border: 1px solid #ffd803;
-  }
+}
