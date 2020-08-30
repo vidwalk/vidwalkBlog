@@ -59,7 +59,7 @@ tl.from(".post", {
     stagger: .6,
     opacity: 0
   })
-  .fro, (".sidebar-sticky", {
+  .from, (".sidebar-sticky", {
     y: 50,
     stagger: .6,
     opacity: 0
