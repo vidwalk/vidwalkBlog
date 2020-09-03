@@ -5,3 +5,4 @@ libintl3.dll
 libiconv2.dll
 commands.txt
 .vscode/
+__pycache__/

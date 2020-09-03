@@ -61,6 +61,7 @@ window.addEventListener("DOMContentLoaded", function () {
   });
 
   tl.from(".post", {
+      delay: .3,
       x: "-=50",
       stagger: .6,
       opacity: 0
@@ -69,7 +70,7 @@ window.addEventListener("DOMContentLoaded", function () {
       y: 50,
       stagger: .6,
       opacity: 0
-    }, '-=2');
+    }, '-=2.3');
 
   //Zoom on Images
   mediumZoom('[zoom]')
