@@ -3,10 +3,10 @@ $(document).ready(function () {
   $('.read-more-button').click(function (event) {
 
 
-    var email = $('.email-input').val();
-    var message = $('.message-input').val();
-    var statusElmEmail = $('.status-email .error-para');
-    var statusElmMessage = $('.status-message .error-para');
+    let email = $('.email-input').val();
+    let message = $('.message-input').val();
+    let statusElmEmail = $('.status-email .error-para');
+    let statusElmMessage = $('.status-message .error-para');
 
 
     statusElmEmail.empty();
@@ -32,8 +32,8 @@ $(document).ready(function () {
 })
 //Code to reset the error message when we click on the message or email input
 $(document).click(function () {
-  var statusElmMessage = $('.status-message .error-para');
-  var statusElmEmail = $('.status-email .error-para');
+  let statusElmMessage = $('.status-message .error-para');
+  let statusElmEmail = $('.status-email .error-para');
   if ($('.message-input').is(":focus")) {
 
     document.getElementById('message-input').classList.remove('active')
@@ -54,7 +54,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
   //Every method here will have a comment. Here will run all bits of code that relate to things after they are loaded.
   // GSAP Code for animating posts and contents in sidebar
-  var tl = gsap.timeline({
+  let tl = gsap.timeline({
     defaults: {
       duration: 1
     }
@@ -77,10 +77,10 @@ window.addEventListener("DOMContentLoaded", function () {
   //form
   // get the form elements defined in your form HTML above
 
-  var form = document.getElementById("contact-form");
-  var button = document.getElementById("contact-button");
-  var statusSuccess = $('.status-message .success-para');
-  var statusError = $('.status-message .error-para');
+  let form = document.getElementById("contact-form");
+  let button = document.getElementById("contact-button");
+  let statusSuccess = $('.status-message .success-para');
+  let statusError = $('.status-message .error-para');
   statusSuccess.empty();
   statusError.empty();
 
@@ -100,7 +100,7 @@ window.addEventListener("DOMContentLoaded", function () {
   if (form) {
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
-      var data = new FormData(form);
+      let data = new FormData(form);
       ajax(form.method, form.action, data, success, error);
     })
   };
@@ -109,7 +109,7 @@ window.addEventListener("DOMContentLoaded", function () {
 // helper function for sending an AJAX request
 
 function ajax(method, url, data, success, error) {
-  var xhr = new XMLHttpRequest();
+  let xhr = new XMLHttpRequest();
   xhr.open(method, url);
   xhr.setRequestHeader("Accept", "application/json");
   xhr.onreadystatechange = function () {
