@@ -70,7 +70,7 @@ window.addEventListener("DOMContentLoaded", function () {
       y: 50,
       stagger: .6,
       opacity: 0
-    }, '-=2.3');
+    }, '-=1.5');
 
   //Zoom on Images
   mediumZoom('[zoom]')
