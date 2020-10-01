@@ -61,16 +61,11 @@ window.addEventListener("DOMContentLoaded", function () {
   });
 
   tl.from(".post", {
-      delay: .15,
-      x: "-=50",
-      stagger: .3,
-      opacity: 0
-    })
-    .from(".sidebar-sticky", {
-      y: 50,
-      stagger: .6,
-      opacity: 0
-    }, '-=1.5');
+    delay: .15,
+    x: "-=50",
+    stagger: .3,
+    opacity: 0
+  });
 
   //Zoom on Images
   mediumZoom('[zoom]')
