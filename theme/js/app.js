@@ -61,9 +61,9 @@ window.addEventListener("DOMContentLoaded", function () {
   });
 
   tl.from(".post", {
-      delay: .3,
+      delay: .15,
       x: "-=50",
-      stagger: .6,
+      stagger: .3,
       opacity: 0
     })
     .from(".sidebar-sticky", {
