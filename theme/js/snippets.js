@@ -1,6 +1,6 @@
 var snippets = document.querySelectorAll('pre');
 [].forEach.call(snippets, function (snippet) {
-    snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn" data-clipboard-snippet><img class="clippy" width="13" src="/images/clippy.svg" alt="Copy to clipboard"></button>');
+    snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn" data-clipboard-snippet><img class="clippy" width="13" src="https://vidwalk.github.io/vidwalkBlog/images/clippy.svg" alt="Copy to clipboard"></button>');
 });
 var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
     target: function (trigger) {
